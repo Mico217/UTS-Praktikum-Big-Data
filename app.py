@@ -1,6 +1,7 @@
 import streamlit as st
 from ultralytics import YOLO
 import tensorflow as tf
+from tensorflow.keras.layers import InputLayer  # Tambahkan import ini jika belum ada
 import numpy as np
 from PIL import Image
 import cv2
@@ -9,7 +10,7 @@ from streamlit_webrtc import webrtc_streamer, VideoProcessorBase, WebRtcMode
 import time
 from collections import defaultdict, Counter
 import threading
-import os 
+import os
 
 # Custom InputLayer to handle batch_shape compatibility issue
 class CustomInputLayer(InputLayer):
