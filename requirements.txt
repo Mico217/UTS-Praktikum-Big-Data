@@ -1,17 +1,33 @@
-# ==== Core ====
+# ===============================
+# Streamlit & UI
+# ===============================
 streamlit==1.39.0
+streamlit-webrtc==0.47.1
 
-# ==== Deep Learning ====
+# ===============================
+# Deep Learning
+# ===============================
 tensorflow==2.19.0
 protobuf==4.25.3
 h5py==3.11.0
 
-# ==== Object Detection ====
+# ===============================
+# Object Detection (YOLO)
+# ===============================
 ultralytics==8.3.23
+torch==2.4.0
+torchvision==0.19.0
 
-# ==== Image & Video Processing ====
+# ===============================
+# Image & Video Processing
+# ===============================
 opencv-python-headless==4.10.0.84
 pillow==10.4.0
 numpy==1.26.4
 av==12.3.0
-streamlit-webrtc==0.47.1
+
+# ===============================
+# Utilities
+# ===============================
+matplotlib==3.9.2
+pandas==2.2.3
