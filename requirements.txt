@@ -1,19 +1,10 @@
-# ==== Core ====
 streamlit==1.39.0
-
-# ==== Deep Learning ====
-tensorflow==2.15.0
-keras==2.15.0
-
-# ==== Object Detection ====
 ultralytics==8.3.23
-
-# ==== Image & Video Processing ====
-opencv-python-headless==4.10.0.84
-pillow==10.4.0
+tensorflow==2.10.0
+keras==2.10.0
 numpy==1.26.4
+pillow==10.4.0
+opencv-python-headless==4.10.0.84
 av==12.3.0
 streamlit-webrtc==0.47.1
-
-# ==== Utils ====
 typing-extensions==4.11.0
