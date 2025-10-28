@@ -9,8 +9,8 @@ from streamlit_webrtc import webrtc_streamer, VideoProcessorBase, WebRtcMode
 import time
 from collections import defaultdict, Counter
 import threading
-import os 
-from keras.src.legacy.saving import legacy_h5_format
+import os
+from tensorflow.keras.models import load_model
 
 # ==========================
 #UI
@@ -86,10 +86,13 @@ st.markdown("""
 @st.cache_resource
 def load_models():
     yolo_model = YOLO("model/MikoSigma.pt")
-    classifier = legacy_h5_format.load_model_from_hdf5("model/MikoCihuy.h5", compile=False)
+    # load model dengan cara yang aman untuk TF 2.15
+    with tf.keras.utils.custom_object_scope({}):
+        classifier = load_model("model/MikoCihuy.h5", compile=False)
     return yolo_model, classifier
 
 yolo_model, classifier = load_models()
+
 
 
 # ==========================
