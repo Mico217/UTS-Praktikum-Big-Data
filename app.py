@@ -10,7 +10,6 @@ import time
 from collections import defaultdict, Counter
 import threading
 import os
-from tensorflow.keras.models import load_model
 
 # ==========================
 #UI
@@ -86,13 +85,10 @@ st.markdown("""
 @st.cache_resource
 def load_models():
     yolo_model = YOLO("model/MikoSigma.pt")
-    with tf.keras.utils.custom_object_scope({}):
-        classifier = load_model("model/MikoCihuy.h5", compile=False)
+    classifier = tf.keras.models.load_model("model/MikoCihuy.h5", compile=False)
     return yolo_model, classifier
 
 yolo_model, classifier = load_models()
-
-
 
 # ==========================
 #Session State
