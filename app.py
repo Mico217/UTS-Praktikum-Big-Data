@@ -11,6 +11,13 @@ from collections import defaultdict, Counter
 import threading
 import os 
 
+# Custom InputLayer to handle batch_shape compatibility issue
+class CustomInputLayer(InputLayer):
+    def __init__(self, batch_shape=None, **kwargs):
+        if batch_shape is not None:
+            kwargs['batch_input_shape'] = batch_shape
+        super().__init__(**kwargs)
+
 # ==========================
 #UI
 # ==========================
