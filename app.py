@@ -86,7 +86,6 @@ st.markdown("""
 @st.cache_resource
 def load_models():
     yolo_model = YOLO("model/MikoSigma.pt")
-    # load model dengan cara yang aman untuk TF 2.15
     with tf.keras.utils.custom_object_scope({}):
         classifier = load_model("model/MikoCihuy.h5", compile=False)
     return yolo_model, classifier
