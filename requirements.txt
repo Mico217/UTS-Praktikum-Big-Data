@@ -1,20 +1,12 @@
-# --- Core runtime ---
 streamlit==1.36.0
 streamlit-webrtc==0.47.1
-
-# --- Machine Learning & Deep Learning ---
 tensorflow==2.10.1
 keras==2.10.0
 torch==2.1.2
 torchvision==0.16.2
 ultralytics==8.1.0
-
-# --- Image & Video processing ---
 opencv-python-headless==4.9.0.80
 Pillow==10.2.0
 numpy==1.23.5
-
-# --- Others / utilities ---
+protobuf==3.19.6
 av==10.0.0
-protobuf==3.20.3
-typing_extensions==4.8.0
