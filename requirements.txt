@@ -1,8 +1,8 @@
-streamlit
-ultralytics
-tensorflow
-numpy
-Pillow
-opencv-python
+streamlit==1.50.0
+ultralytics==8.3.221
+tensorflow==2.15.0
+numpy==1.26.4
+Pillow==10.4.0
+opencv-python==4.10.0.84
 pyav==11.0.0
-streamlit-webrtc
+streamlit-webrtc==0.47.1
