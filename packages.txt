@@ -1,11 +1,2 @@
-ffmpeg
-libsm6
-libxext6
-pkg-config
-libavdevice-dev
-libavfilter-dev
-libavformat-dev
-libavcodec-dev
-libswscale-dev
-libavutil-dev
-libv4l-dev
+libgl1
+libglib2.0-0
