@@ -9,7 +9,7 @@ from streamlit_webrtc import webrtc_streamer, VideoProcessorBase, WebRtcMode
 import time
 from collections import defaultdict, Counter
 import threading
-import os
+import os 
 
 # ==========================
 #UI
@@ -85,7 +85,7 @@ st.markdown("""
 @st.cache_resource
 def load_models():
     yolo_model = YOLO("model/MikoSigma.pt")
-    classifier = tf.keras.models.load_model("model/MikoCihuy.h5", compile=False)
+    classifier = tf.keras.models.load_model("model/MikoCihuy.h5")
     return yolo_model, classifier
 
 yolo_model, classifier = load_models()
@@ -235,7 +235,7 @@ with st.sidebar.expander("📚 Tutorial Penggunaan", expanded=True):
     - Klik "Start Camera" untuk memulai deteksi real-time.<br>
     - Untuk menghentikan dan menyimpan hasil ke dashboard statistik, klik tombol "Stop Camera" yang ada di atas (bukan di bawah), agar deteksi objek tercatat dengan benar.<br>
     - Jika kamera tidak bisa dibuka, silahkan refresh website nya.<br>
-    - Atau upload gambar untuk deteksi objek statis.<br>
+    - Upload gambar maka akan otomatin deteksi objek pada gambar.<br>
     <strong>Klasifikasi Kacamata:</strong><br>
     - Unggah gambar wajah, maka akan otomatis klasifikasi apakah memakai kacamata atau tidak.<br>
     <strong>Dashboard Statistik:</strong><br>
