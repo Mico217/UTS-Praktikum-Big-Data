@@ -82,10 +82,10 @@ st.markdown("""
 # ==========================
 # Load Models
 # ==========================
-@st.cache_resource
+@st.cache_resource(experimental_allow_widgets=True)
 def load_models():
     yolo_model = YOLO("model/MikoSigma.pt")
-    classifier = tf.keras.models.load_model("model/MikoCihuy.h5")
+    classifier = tf.keras.models.load_model("model/MikoCihuy.h5", compile=False)
     return yolo_model, classifier
 
 yolo_model, classifier = load_models()
