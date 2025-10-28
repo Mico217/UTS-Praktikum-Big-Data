@@ -10,6 +10,7 @@ import time
 from collections import defaultdict, Counter
 import threading
 import os 
+from keras.src.legacy.saving import legacy_h5_format
 
 # ==========================
 #UI
@@ -85,10 +86,11 @@ st.markdown("""
 @st.cache_resource
 def load_models():
     yolo_model = YOLO("model/MikoSigma.pt")
-    classifier = tf.keras.models.load_model("model/MikoCihuy.h5", compile=False)
+    classifier = legacy_h5_format.load_model_from_hdf5("model/MikoCihuy.h5", compile=False)
     return yolo_model, classifier
 
 yolo_model, classifier = load_models()
+
 
 # ==========================
 #Session State
