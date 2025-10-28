@@ -2,7 +2,7 @@
 streamlit==1.39.0
 
 # ==== Deep Learning ====
-tensorflow==2.10.0  # Downgrade dari 2.13.0 ke 2.10.0 untuk kompatibilitas model
+tensorflow==2.13.0
 protobuf==3.20.3
 h5py==3.10.0
 
